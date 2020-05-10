@@ -4,7 +4,8 @@ namespace LM.Messages
 {
     public abstract class RequestMessage
     {
-        protected RequestMessage(Guid requestCode)
+        public RequestMessage() { RequestCode = Guid.NewGuid(); }
+        public RequestMessage(Guid requestCode)
         {
             RequestCode = requestCode;
         }

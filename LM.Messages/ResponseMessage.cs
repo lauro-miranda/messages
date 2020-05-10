@@ -4,7 +4,8 @@ namespace LM.Messages
 {
     public abstract class ResponseMessage
     {
-        protected ResponseMessage(Guid responseCode)
+        public ResponseMessage() { ResponseCode = Guid.NewGuid(); }
+        public ResponseMessage(Guid responseCode)
         {
             ResponseCode = responseCode;
         }
